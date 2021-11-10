@@ -31,6 +31,10 @@ public class Cirkel {
         this.kleur = "wit";
     }
 
+    public static String geefDefinitie() {
+        return "Een cirkel is een verzameling punten, die allemaal dezelfde afstand tot een middelpunt hebben.";
+    }
+
     public double geefOmtrek(){
         return 2 * Math.PI * straal;
     }

@@ -9,6 +9,8 @@ import model.Cirkel;
 public class MeetkundeLauncher {
 
     public static void main(String[] args) {
+        System.out.println(Cirkel.geefDefinitie());
+
         Cirkel mijnAllArgsCirkel = new Cirkel(3, 1, 4, "groen");
         System.out.println(mijnAllArgsCirkel.geefOmtrek());
         System.out.println(mijnAllArgsCirkel.geefOppervlakte());
@@ -20,9 +22,6 @@ public class MeetkundeLauncher {
         Cirkel mijnStraalCirkel = new Cirkel();
         System.out.println(mijnStraalCirkel.geefOmtrek());
         System.out.println(mijnStraalCirkel.geefOppervlakte());
-
-
-
 
     }
 
