@@ -19,17 +19,11 @@ public class Cirkel {
     }
 
     public Cirkel(double straal) {
-        setStraal(straal);
-        this.middelpuntX = 0;
-        this.middelpuntY = 0;
-        this.kleur = "wit";
+        this(straal, 0, 0, "wit");
     }
 
     public Cirkel() {
-        this.straal = 1;
-        this.middelpuntX = 0;
-        this.middelpuntY = 0;
-        this.kleur = "wit";
+        this(1);
     }
 
     public static String geefDefinitie() {
