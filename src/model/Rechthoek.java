@@ -20,7 +20,7 @@ public class Rechthoek extends Figuur {
     }
 
     public Rechthoek(double lengte, double breedte) {
-        this(lengte, breedte, new Punt(),DEFAULTWAARDE_KLEUR);
+        this(lengte, breedte, new Punt(), DEFAULTWAARDE_KLEUR);
 
     }
 
@@ -41,6 +41,12 @@ public class Rechthoek extends Figuur {
     @Override
     public double geefOppervlakte() {
         return lengte * breedte;
+    }
+
+    public String toString() {
+        return super.toString() + "\nLengte: " + lengte +
+                "\nBreedte: " + breedte +
+                "\nHoekpunt: " + hoekpuntLinksBoven.toString();
     }
 
     // getters & setters

@@ -16,6 +16,11 @@ public class Punt {
         this.xCoordinaat = xCoordinaat;
         this.yCoordinaat = yCoordinaat;
     }
+    // todo checken string formatting met of zonder haakjes
+    @Override
+    public String toString() {
+        return String.format("(%.2f, %.2f)", xCoordinaat,yCoordinaat);
+    }
 
     public double getxCoordinaat() {
         return xCoordinaat;

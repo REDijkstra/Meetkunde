@@ -27,22 +27,28 @@ public class Cirkel extends Figuur {
     }
 
     @Override
-    public double geefOmtrek(){
+    public double geefOmtrek() {
         return 2 * Math.PI * straal;
     }
 
     @Override
-    public double geefOppervlakte(){
+    public double geefOppervlakte() {
         return Math.PI * straal * straal;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nStraal: " + straal +
+                "\nMiddelpunt: " + middelpunt.toString();
+    }
 
     public double getStraal() {
         return straal;
     }
 
     public void setStraal(double straal) {
-        if (straal <= 0){
+        if (straal <= 0) {
             System.out.println("de straal moet positief zijn. De straal wordt op 1 gezet");
             this.straal = 1.0;
         } else {
