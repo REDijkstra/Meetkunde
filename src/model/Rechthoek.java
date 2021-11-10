@@ -4,14 +4,12 @@ package model;
  * @author Rutger Dijkstra <r.e.dijkstra@st.hanze.nl>
  * Deze klasse omschrijft de eigenschappen van een rechthoek.
  */
-public class Rechthoek {
+public class Rechthoek extends Figuur {
 
     //constanten & variabelen
-    private static final double GRENSWAARDE_GROOT_FIGUUR = 100.0;
     private double lengte;
     private double breedte;
     private Punt hoekpuntLinksBoven;
-    private String kleur;
 
     //constructors
     public Rechthoek(double lengte, double breedte, Punt hoekpuntLinksBoven, String kleur) {
@@ -22,12 +20,12 @@ public class Rechthoek {
     }
 
     public Rechthoek(double lengte, double breedte) {
-        this(lengte, breedte, new Punt(), "wit");
+        this(lengte, breedte, new Punt(),DEFAULTWAARDE_KLEUR);
 
     }
 
     public Rechthoek() {
-        this(2,1);
+        this(2, 1);
     }
 
     // methoden
@@ -35,20 +33,14 @@ public class Rechthoek {
         return "Een rechthoek is een vierhoek met vier rechte hoeken";
     }
 
+    @Override
     public double geefOmtrek() {
         return lengte * 2 + breedte * 2;
     }
 
-    public double geefOppervlakte(){
+    @Override
+    public double geefOppervlakte() {
         return lengte * breedte;
-    }
-
-    public String vertelOverGrootte(){
-        if (geefOppervlakte() > GRENSWAARDE_GROOT_FIGUUR){
-            return "Ik ben groot!!!";
-        } else {
-            return  "Ik ben klein!!!";
-        }
     }
 
     // getters & setters
@@ -77,12 +69,5 @@ public class Rechthoek {
         this.hoekpuntLinksBoven = hoekpuntLinksBoven;
     }
 
-    public String getKleur() {
-        return kleur;
-    }
-
-    public void setKleur(String kleur) {
-        this.kleur = kleur;
-    }
 }
 
