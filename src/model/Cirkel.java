@@ -5,6 +5,7 @@ package model;
  * Deze klasse omschrijft een cirkel
  */
 public class Cirkel {
+    private final static double GRENSWAARDE_GROOT_FIGUUR =  100.0;
     private double straal;
     private double middelpuntX;
     private double middelpuntY;
@@ -33,6 +34,14 @@ public class Cirkel {
 
     public static String geefDefinitie() {
         return "Een cirkel is een verzameling punten, die allemaal dezelfde afstand tot een middelpunt hebben.";
+    }
+
+    public  String VertelOverGrootte(){
+        if (geefOppervlakte() > GRENSWAARDE_GROOT_FIGUUR) {
+            return "Ik ben groot!!!";
+        } else {
+            return  "Ik ben klein!!!";
+        }
     }
 
     public double geefOmtrek(){
