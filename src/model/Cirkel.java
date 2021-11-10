@@ -7,19 +7,17 @@ package model;
 public class Cirkel {
     private final static double GRENSWAARDE_GROOT_FIGUUR =  100.0;
     private double straal;
-    private double middelpuntX;
-    private double middelpuntY;
+    private Punt middelpunt;
     private String kleur;
 
-    public Cirkel(double straal, double middelpuntX, double middelpuntY, String kleur) {
-        setStraal(straal);
-        this.middelpuntX = middelpuntX;
-        this.middelpuntY = middelpuntY;
+    public Cirkel(double straal, Punt middelpunt, String kleur) {
+        this.straal = straal;
+        this.middelpunt = middelpunt;
         this.kleur = kleur;
     }
 
     public Cirkel(double straal) {
-        this(straal, 0, 0, "wit");
+        this(straal, new Punt(), "wit");
     }
 
     public Cirkel() {
@@ -60,21 +58,6 @@ public class Cirkel {
         }
     }
 
-    public double getMiddelpuntX() {
-        return middelpuntX;
-    }
-
-    public void setMiddelpuntX(double middelpuntX) {
-        this.middelpuntX = middelpuntX;
-    }
-
-    public double getMiddelpuntY() {
-        return middelpuntY;
-    }
-
-    public void setMiddelpuntY(double middelpuntY) {
-        this.middelpuntY = middelpuntY;
-    }
 
     public String getKleur() {
         return kleur;
@@ -82,5 +65,13 @@ public class Cirkel {
 
     public void setKleur(String kleur) {
         this.kleur = kleur;
+    }
+
+    public Punt getMiddelpunt() {
+        return middelpunt;
+    }
+
+    public void setMiddelpunt(Punt middelpunt) {
+        this.middelpunt = middelpunt;
     }
 }
