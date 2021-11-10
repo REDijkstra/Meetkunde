@@ -30,13 +30,6 @@ public class Cirkel {
         return "Een cirkel is een verzameling punten, die allemaal dezelfde afstand tot een middelpunt hebben.";
     }
 
-    public  String VertelOverGrootte(){
-        if (geefOppervlakte() > GRENSWAARDE_GROOT_FIGUUR) {
-            return "Ik ben groot!!!";
-        } else {
-            return  "Ik ben klein!!!";
-        }
-    }
 
     public double geefOmtrek(){
         return 2 * Math.PI * straal;
@@ -44,6 +37,14 @@ public class Cirkel {
 
     public double geefOppervlakte(){
         return Math.PI * straal * straal;
+    }
+
+    public  String VertelOverGrootte(){
+        if (geefOppervlakte() > GRENSWAARDE_GROOT_FIGUUR) {
+            return "Ik ben groot!!!";
+        } else {
+            return  "Ik ben klein!!!";
+        }
     }
 
     public double getStraal() {
@@ -57,5 +58,29 @@ public class Cirkel {
         } else {
             this.straal = straal;
         }
+    }
+
+    public double getMiddelpuntX() {
+        return middelpuntX;
+    }
+
+    public void setMiddelpuntX(double middelpuntX) {
+        this.middelpuntX = middelpuntX;
+    }
+
+    public double getMiddelpuntY() {
+        return middelpuntY;
+    }
+
+    public void setMiddelpuntY(double middelpuntY) {
+        this.middelpuntY = middelpuntY;
+    }
+
+    public String getKleur() {
+        return kleur;
+    }
+
+    public void setKleur(String kleur) {
+        this.kleur = kleur;
     }
 }
