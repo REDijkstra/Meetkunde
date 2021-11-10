@@ -4,20 +4,18 @@ package model;
  * @author Rutger Dijkstra <r.e.dijkstra@st.hanze.nl>
  * Deze klasse omschrijft een cirkel
  */
-public class Cirkel {
-    private final static double GRENSWAARDE_GROOT_FIGUUR =  100.0;
+public class Cirkel extends Figuur {
     private double straal;
     private Punt middelpunt;
-    private String kleur;
 
     public Cirkel(double straal, Punt middelpunt, String kleur) {
+        super(kleur);
         this.straal = straal;
         this.middelpunt = middelpunt;
-        this.kleur = kleur;
     }
 
     public Cirkel(double straal) {
-        this(straal, new Punt(), "wit");
+        this(straal, new Punt(), DEFAULTWAARDE_KLEUR);
     }
 
     public Cirkel() {
@@ -28,22 +26,16 @@ public class Cirkel {
         return "Een cirkel is een verzameling punten, die allemaal dezelfde afstand tot een middelpunt hebben.";
     }
 
-
+    @Override
     public double geefOmtrek(){
         return 2 * Math.PI * straal;
     }
 
+    @Override
     public double geefOppervlakte(){
         return Math.PI * straal * straal;
     }
 
-    public  String VertelOverGrootte(){
-        if (geefOppervlakte() > GRENSWAARDE_GROOT_FIGUUR) {
-            return "Ik ben groot!!!";
-        } else {
-            return  "Ik ben klein!!!";
-        }
-    }
 
     public double getStraal() {
         return straal;
@@ -56,15 +48,6 @@ public class Cirkel {
         } else {
             this.straal = straal;
         }
-    }
-
-
-    public String getKleur() {
-        return kleur;
-    }
-
-    public void setKleur(String kleur) {
-        this.kleur = kleur;
     }
 
     public Punt getMiddelpunt() {

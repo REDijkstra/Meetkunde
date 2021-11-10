@@ -1,7 +1,6 @@
 package controller;
 
-import model.Punt;
-import model.Rechthoek;
+import model.Cirkel;
 
 /**
  * @author Rutger Dijkstra <r.e.dijkstra@st.hanze.nl>
@@ -11,7 +10,7 @@ public class MeetkundeLauncher {
 
     public static void main(String[] args) {
 
-        System.out.println(Rechthoek.geefDefinitie());
+        /*System.out.println(Rechthoek.geefDefinitie());
         Rechthoek[] mijnRechthoekArray = new Rechthoek[3];
         mijnRechthoekArray[0] = new Rechthoek(4, 3, new Punt(2, 5), "blauw");
         mijnRechthoekArray[1] = new Rechthoek();
@@ -22,7 +21,21 @@ public class MeetkundeLauncher {
             System.out.println(mijnRechthoekArray[arrayTeller].geefOppervlakte());
             System.out.println(mijnRechthoekArray[arrayTeller].getHoekpuntLinksBoven().getxCoordinaat());
             System.out.println(mijnRechthoekArray[arrayTeller].getHoekpuntLinksBoven().getyCoordinaat());
-            System.out.println(mijnRechthoekArray[arrayTeller].vertelOverGrootte());
+            System.out.println(mijnRechthoekArray[arrayTeller].vertelOverGrootte());*/
+
+        Cirkel[] mijnCirkelArray = new Cirkel[3];
+        mijnCirkelArray[0] = new Cirkel(1);
+        mijnCirkelArray[1] = new Cirkel(2);
+        mijnCirkelArray[2] = new Cirkel(3);
+
+        for (int arrayTeller = 0; arrayTeller < 3; arrayTeller++) {
+            System.out.println(mijnCirkelArray[arrayTeller].geefOmtrek());
+            System.out.println(mijnCirkelArray[arrayTeller].geefOppervlakte());
+            System.out.println(mijnCirkelArray[arrayTeller].getMiddelpunt().getxCoordinaat());
+            System.out.println(mijnCirkelArray[arrayTeller].getMiddelpunt().getyCoordinaat());
+            System.out.println(mijnCirkelArray[arrayTeller].vertelOverGrootte());
         }
+
     }
 }
+
