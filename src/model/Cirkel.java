@@ -1,4 +1,4 @@
-package controller;
+package model;
 
 /**
  * @author Rutger Dijkstra <r.e.dijkstra@st.hanze.nl>
