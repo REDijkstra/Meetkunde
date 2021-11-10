@@ -1,6 +1,5 @@
 package controller;
 
-
 import model.Punt;
 import model.Rechthoek;
 
@@ -11,7 +10,6 @@ import model.Rechthoek;
 public class MeetkundeLauncher {
 
     public static void main(String[] args) {
-
 
         System.out.println(Rechthoek.geefDefinitie());
         Rechthoek[] mijnRechthoekArray = new Rechthoek[3];
@@ -26,7 +24,5 @@ public class MeetkundeLauncher {
             System.out.println(mijnRechthoekArray[arrayTeller].getHoekpuntLinksBoven().getyCoordinaat());
             System.out.println(mijnRechthoekArray[arrayTeller].vertelOverGrootte());
         }
-
     }
-
 }
