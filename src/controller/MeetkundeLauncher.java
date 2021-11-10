@@ -4,24 +4,22 @@ import model.Cirkel;
 
 /**
  * @author Rutger Dijkstra <r.e.dijkstra@st.hanze.nl>
- * Dit is wat het programma doet.
+ * Deze launcher laadt figuren en manipuleert deze waar nodig.
  */
 public class MeetkundeLauncher {
 
     public static void main(String[] args) {
-        Cirkel mijnAllArgsCirkel = new Cirkel(3, 1, 4, "groen");
-        System.out.println(mijnAllArgsCirkel.geefOmtrek());
-        System.out.println(mijnAllArgsCirkel.geefOppervlakte());
-        System.out.println();
 
-        Cirkel mijnDefaultCirkel = new Cirkel();
-        System.out.println(mijnDefaultCirkel.geefOmtrek());
-        System.out.println(mijnDefaultCirkel.geefOppervlakte());
-        System.out.println();
+        Cirkel[] mijnCirkelArray = new Cirkel[3];
+        mijnCirkelArray[0] = new Cirkel(3, 1, 4, "groen");
+        mijnCirkelArray[1] = new Cirkel();
+        mijnCirkelArray[2] = new Cirkel(6);
 
-        Cirkel mijnStraalCirkel = new Cirkel(6);
-        System.out.println(mijnStraalCirkel.geefOmtrek());
-        System.out.println(mijnStraalCirkel.geefOppervlakte());
+        for (int arrayTeller = 0; arrayTeller < mijnCirkelArray.length; arrayTeller++) {
+            System.out.println(mijnCirkelArray[arrayTeller].geefOmtrek());
+            System.out.println(mijnCirkelArray[arrayTeller].geefOppervlakte());
+            System.out.println(mijnCirkelArray[arrayTeller].getStraal());
+        }
     }
 
 }
